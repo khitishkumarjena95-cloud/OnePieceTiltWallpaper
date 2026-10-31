@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-feature android:name="android.software.live_wallpaper" android:required="true"/>
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false"/>
+    <application android:theme="@android:style/Theme.Material.Light.NoActionBar" android:label="One Piece Tilt Wallpaper">
+        <service android:name=".TiltWallpaperService" android:label="One Piece Tilt Wallpaper" android:permission="android.permission.BIND_WALLPAPER" android:exported="true">
+            <intent-filter><action android:name="android.service.wallpaper.WallpaperService"/></intent-filter>
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/wallpaper"/>
+        </service>
+    </application>
+</manifest>
